@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-//package "org.example";
+package csv;
 
 /*
  * The resource that is stored at the
