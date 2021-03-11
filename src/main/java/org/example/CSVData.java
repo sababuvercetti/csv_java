@@ -13,3 +13,5 @@ public class CSVData {
     @CsvBindByName(column="data_size")
     private  int dataSize;
 }
+
+
