@@ -6,4 +6,6 @@ package org.example;
  * Time: 6:47 AM
  */
 public class CSVData {
+    @CsvBindByPosition(position=0)
+    private int time;
 }
