@@ -3,7 +3,6 @@ import com.opencsv.bean.CsvToBeanBuilder;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 
 public class App 
@@ -18,6 +17,8 @@ public class App
             .parse();
 
     csvData.forEach(System.out::println);
+
+    Message message=new Message();
 
 }
 
