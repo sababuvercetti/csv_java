@@ -1,7 +1,6 @@
 package org.example;
 
 import com.opencsv.bean.CsvBindByName;
-import com.opencsv.bean.CsvBindByPosition;
 
 /**
  * User: HP
