@@ -1,22 +1,24 @@
 package org.example;
-import au.com.bytecode.opencsv.CSVReader;
+import com.opencsv.bean.CsvToBeanBuilder;
+
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
 public class App 
-{ @SuppressWarnings("resource")
-public static void main(String[] args) throws Exception
-{
-    //Build reader instance
-    CSVReader reader = new CSVReader(new FileReader("data.csv"), ',', '"', 1);
+{  public static void main(String[] args) throws IOException {
+///Set path
+    //TODO: Env Initialize
+    String fileName = "c:\\test\\csv\\country.csv";
 
-    //Read all rows at once
-    List<String[]> allRows = reader.readAll();
+    List<CSVData> csvData = new CsvToBeanBuilder(new FileReader(fileName))
+            .withType(CSVData.class)
+            .build()
+            .parse();
 
-    //Read CSV line by line and use the string array as you want
-    for(String[] row : allRows){
-        System.out.println(Arrays.toString(row));
-    }
+    csvData.forEach(System.out::println);
+
 }
+
 }

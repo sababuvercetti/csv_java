@@ -1,5 +1,6 @@
 package org.example;
 
+import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvBindByPosition;
 
 /**
@@ -8,8 +9,8 @@ import com.opencsv.bean.CsvBindByPosition;
  * Time: 6:47 AM
  */
 public class CSVData {
-    @CsvBindByPosition(position=0)
+    @CsvBindByName(column="waiting_time")
     private int waitingTimeInSeconds;
-    @CsvBindByPosition(position=0)
+    @CsvBindByName(column="data_size")
     private  int dataSize;
 }
